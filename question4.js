@@ -10,3 +10,10 @@
 // Input: "copyright"
 
 // Output: true
+
+
+// Some sources say sets are not considered an array while others do - unsure
+hasDuplicates = function(string){
+    const uniqueString = new Set(string);
+    return uniqueString.size === string.length;
+}
