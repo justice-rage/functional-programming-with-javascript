@@ -9,4 +9,18 @@
 
 // a. Non-recursive solution
 
+compressString = function stringCompression(str) {
+    let output = ''
+    let count = 0;
+   for (index = 0; index < str.length; index++) {
+    count++;
+    if (str[index] != [str[index + 1]]) {
+        output += count + str[index];
+        count = 0;
+    }
+   }
+   const finalOutput = output.replaceAll('1', '');
+   return finalOutput;
+}
+
 // b. Recursive solution
