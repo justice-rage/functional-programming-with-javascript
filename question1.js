@@ -1,6 +1,5 @@
 // Specialized function --> more functional programming in nature
 turnStringIntoUrlV1 = function(string){
-    // const stringArrayTwin - create array modeled after string
     const stringUrlTwin = string.split(' ').join('%20');
     return stringUrlTwin
 }
@@ -12,10 +11,10 @@ turnStringIntoUrlV2 = function(string){
 }
 
 // recursive solution --> functional programming oriented
-turnStringIntoUrlV3 = function createNewString(string, target, replacement) {
+turnStringIntoUrlV3 = function editString(string, target, replacement) {
     if (string.includes(target) === false){
         return string;
     }
     string = string.split(target).join(replacement);
-    return createNewString(string, target, replacement);
+    return editString(string, target, replacement);
 };
